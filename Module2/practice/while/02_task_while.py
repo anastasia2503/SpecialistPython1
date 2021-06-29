@@ -3,3 +3,5 @@
 # то программа запрашивает ввод снова.
 
 # TODO: your code here
+while str != "хватит":
+    str = input("Ввод: ")
