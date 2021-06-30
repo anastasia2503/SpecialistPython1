@@ -8,3 +8,18 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat
 # Примечание: обратите внимание на перенос длинной строки на новую строку
 
 # TODO: your code here
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat consequat vestibulum. " \
+       "Donec tincidunt sed lorem et feugiat. Nullam elementum"
+text = text.replace('.', '')
+text = text.replace(',', '')
+parts = text.split(' ')
+print(parts)
+x = 0
+res = 0
+while x < len(parts):
+    if len(parts[x]) > 7:
+        res += 1
+    else:
+        pass
+    x += 1
+print(res)
