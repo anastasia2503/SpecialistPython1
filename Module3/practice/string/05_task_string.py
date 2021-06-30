@@ -5,4 +5,14 @@
 # Пример строки перевертыша: "И темен город. Мороз узором дорог не мети."
 
 # TODO: your code here
-
+string = 'И темен город. Мороз узором дорог не мети.'
+string = string.replace(' ', '')
+string = string.replace('.', '')
+string = string.lower()
+#print(string)
+reverse_string = string[::-1]
+#print(reverse_string)
+if string == reverse_string:
+    print('перевертыш')
+else:
+    print('не перевертыш')
