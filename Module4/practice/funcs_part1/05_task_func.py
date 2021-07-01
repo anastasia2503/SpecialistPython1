@@ -3,7 +3,21 @@
 # Если по заданным точкам треугольник построить нельзя, выведите соответствующее сообщение.
 # Подсказка: для нахождения площади используйте Теорему Герона
 
-# TODO: your code here
+def can_triangle(p1, p2, p3):
+    x1, y1 = p1
+    x2, y2 = p2
+    x3, y3 = p3
+    lenght12 = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+    lenght13 = ((x3 - x1)**2 + (y3 - y1)**2)**0.5
+    lenght23 = ((x3 - x2)**2 + (y3 - y2)**2)**0.5
+    if lenght13 + lenght23 < lenght12 and lenght12 + lenght13 < lenght23 and lenght23 + lenght12 < lenght13:
+        p = lenght13 + lenght23 + lenght12
+        s = (p*(p - lenght13)*(p - lenght23)*(p - lenght12))**0.5
+        return p, s
+    return 'треугольник построить нельзя'
+
+# Пример вызова функции
+print(can_triangle((10, 12), (14, 18), (12, 12)))
 
 
 # Не забудьте протестировать вашу функцию
